@@ -25,7 +25,7 @@ public class FirstWindow implements ActionListener {
 
         frame = new JFrame();
 
-        ImageIcon hospitalIconImage = new ImageIcon("/Users/nayeemahmed/Documents/University-Assignment/HospitalProject/src/hospitalproject/images/hospital_Icon.png");
+        ImageIcon hospitalIconImage = new ImageIcon("C:\\Users\\Nayeem\\Desktop\\hospital-management-java\\HospitalProject\\src\\hospitalproject\\images\\hospital_Icon.png");
 
         frame.setSize(1400, 900);
         frame.setTitle("Hospital Management System");
