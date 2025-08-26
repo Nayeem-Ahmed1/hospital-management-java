@@ -1,7 +1,6 @@
 package hospitalproject.gui;
 
 import hospitalproject.Main;
-import hospitalproject.utils.FirstWindowButton;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -25,7 +24,7 @@ public class FirstWindow implements ActionListener {
 
         frame = new JFrame();
 
-        ImageIcon hospitalIconImage = new ImageIcon("C:\\Users\\Nayeem\\Desktop\\hospital-management-java\\HospitalProject\\src\\hospitalproject\\images\\hospital_Icon.png");
+        ImageIcon hospitalIconImage = new ImageIcon("src/hospitalproject/images/hospital_icon.png");
 
         frame.setSize(1400, 900);
         frame.setTitle("Hospital Management System");
@@ -101,13 +100,15 @@ public class FirstWindow implements ActionListener {
 
         if (e.getSource() == buttonDoctor) {
 
-            System.out.println("Doctor Button Clicked!");
+            Main.changeActiveScreen("doctorLoginScreen");
+            frame.dispose();
 
         }
 
         if (e.getSource() == buttonPatient) {
 
-            System.out.println("Patient Button Clicked!");
+            Main.changeActiveScreen("patientLoginScreen");
+            frame.dispose();
 
         }
 

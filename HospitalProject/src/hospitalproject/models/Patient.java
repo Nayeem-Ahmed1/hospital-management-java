@@ -1,9 +1,10 @@
 package hospitalproject.models;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Patient extends User {
+public class Patient extends User implements Serializable{
 
     private Date dob;
     private String address;
@@ -13,15 +14,16 @@ public class Patient extends User {
     private String username;
     private String password;
     private ArrayList<String> medicalHistories;
-    private ArrayList<String> appointments;
+    private ArrayList<Appointment> appointments;
+    private Date createdAt;
     
-    public Patient(int id, String name, String email, String contact,String gender,String district,Date dob,String address,String emerContact,String bloodGroup){
+    public Patient(int id, String name, String email, String contact,String gender,String district,Date dob,String address,String emerContact,String bloodGroup,String username,String password){
         
-        this(id,name,email,contact,gender,district,dob,address,emerContact,bloodGroup,"none");
+        this(id,name,email,contact,gender,district,dob,address,emerContact,bloodGroup,username,password,"healthy");
         
     }
 
-    public Patient(int id, String name, String email, String contact, String gender,String district, Date dob, String address, String emerContact, String bloodGroup, String status) {
+    public Patient(int id, String name, String email, String contact, String gender,String district, Date dob, String address, String emerContact, String bloodGroup,String username,String password, String status) {
 
         super(id, name, email, contact, gender,district);
 
@@ -30,8 +32,11 @@ public class Patient extends User {
         this.emergencyContact = emerContact;
         this.bloodGroup = bloodGroup;
         this.status = status;
+        this.username = username;
+        this.password = password;
         this.medicalHistories = new ArrayList<>();
         this.appointments = new ArrayList<>();
+        this.createdAt = new Date();
     }
 
     public Date getDob() {
@@ -87,11 +92,11 @@ public class Patient extends User {
         this.medicalHistories = medicalHistories;
     }
 
-    public ArrayList<String> getAppointments() {
+    public ArrayList<Appointment> getAppointments() {
         return appointments;
     }
 
-    public void setAppointments(ArrayList<String> appointments) {
+    public void setAppointments(ArrayList<Appointment> appointments) {
         this.appointments = appointments;
     }
 
@@ -111,6 +116,13 @@ public class Patient extends User {
         this.password = password;
     }
     
+    public Date getCreatedAt(){
+        return this.createdAt;
+    }
     
-
+    public void setCreatedAt(Date date){
+        this.createdAt = date;
+    }
+    
+    
 }

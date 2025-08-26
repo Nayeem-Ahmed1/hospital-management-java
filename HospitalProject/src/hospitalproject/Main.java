@@ -1,7 +1,14 @@
 
 package hospitalproject;
+import hospitalproject.gui.AdminDashboard;
 import hospitalproject.gui.AdminLoginPage;
+import hospitalproject.gui.DoctorDashboard;
+import hospitalproject.gui.DoctorLoginScreen;
+import hospitalproject.gui.DoctorSignUpPage;
 import hospitalproject.gui.FirstWindow;
+import hospitalproject.gui.PatientDashboard;
+import hospitalproject.gui.PatientLoginScreen;
+import hospitalproject.gui.PatientSignUpPage;
 
 public class Main {
     
@@ -27,6 +34,36 @@ public class Main {
                 
                 AdminLoginPage call = new AdminLoginPage();
                 
+            }
+            
+            case "adminDashboard" -> {
+                AdminDashboard call = new AdminDashboard();
+            }
+            
+            case "patientLoginScreen" -> {
+                PatientLoginScreen call = new PatientLoginScreen();
+            }
+            case "patientDashboard" -> {
+                PatientDashboard call = new PatientDashboard();
+            }
+            case "registerAccountPatient" -> {
+                PatientSignUpPage call = new PatientSignUpPage();
+            }
+            case "registerAccountDoctor" -> {
+                DoctorSignUpPage call = new DoctorSignUpPage();
+            }
+            case "doctorLoginScreen" -> {
+                
+                DoctorLoginScreen call = new DoctorLoginScreen();
+                
+            }
+            case "doctorDashboard" -> {
+                
+                DoctorDashboard call = new DoctorDashboard();
+            }
+            case "DoctorSignUpPage" -> {
+                
+                DoctorSignUpPage call = new DoctorSignUpPage();
             }
         }          
     }

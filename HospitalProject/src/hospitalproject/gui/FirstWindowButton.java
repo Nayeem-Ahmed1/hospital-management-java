@@ -1,5 +1,5 @@
 
-package hospitalproject.utils;
+package hospitalproject.gui;
 
 import java.awt.Color;
 import java.awt.Cursor;
